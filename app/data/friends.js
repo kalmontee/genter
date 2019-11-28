@@ -1,6 +1,6 @@
 const userData = [{
         "name": "The Weeknd",
-        "photo": "https://www.rap-up.com/app/uploads/2019/11/the-weeknd-mg.jpg",
+        "photo": "https://ca-times.brightspotcdn.com/dims4/default/56ef62c/2147483647/strip/true/crop/1200x700+0+0/resize/840x490!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fd7%2F98%2Ff5ca95d5a01ee16755af353210f8%2Fla-et-ms-the-weeknd-arrested-for-allegedly-pun-001",
         "scores": [
             2,
             4,
