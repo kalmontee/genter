@@ -1,6 +1,6 @@
 const userData = [{
         "name": "The Weeknd",
-        "photo": "https://ca-times.brightspotcdn.com/dims4/default/56ef62c/2147483647/strip/true/crop/1200x700+0+0/resize/840x490!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fd7%2F98%2Ff5ca95d5a01ee16755af353210f8%2Fla-et-ms-the-weeknd-arrested-for-allegedly-pun-001",
+        "photo": "https://www.rollingstone.com/wp-content/uploads/2018/06/the-weeknd-my-dear-melancholy-ed3faf46-020a-4f36-9bf9-8f3156fbfd86.jpg?resize=900,600&w=450",
         "scores": [
             2,
             4,
@@ -64,7 +64,7 @@ const userData = [{
     },
     {
         "name": "Ariana Grande",
-        "photo": "https://media1.popsugar-assets.com/files/thumbor/cv5OP-R3W-eyDn0GcGLLCJJWLmg/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2019/06/19/950/n/1922153/1e5067d35d0aadb3e2ecf9.02908622_/i/Best-Celebrity-Makeup-Artists.jpg",
+        "photo": "https://pixel.nymag.com/imgs/daily/vulture/2019/07/09/09-ariana-grande.w330.h412.jpg",
         "scores": [
             5,
             3,
