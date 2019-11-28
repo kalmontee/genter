@@ -11,31 +11,32 @@ module.exports = app => {
 
     // A POST routes /api/friends. This will be used to handle incoming survey results.
     app.post("/api/friends", (req, res) => {
-        let matchFriend = req.body;
-        let newScores = matchFriend.scores;
-        // The closest match will be the user with the least amount of difference.
-        let differenceArr = [];
-        // By comparing all scores this will hold the best match
-        let matchIndex = 0;
 
-        friends.forEach(element => {
-            var friendScores = element.friends.scores;
-            var scoreDifference = 0;
+        let newFriend = req.body;
+        let newScores = newFriend.scores;
+        let differenceArray = []; // to hold each friend's score difference for comparison purposes
+        let matchIndex = 0; // for use as an index when we compare all scores, will hold index of best match
 
-            newScores.forEach(product => {
-                scoreDifference += Math.abs(parseInt(product.newScores) - parseInt(product.newScores));
-            });
-            differenceArr.push(scoreDifference);
+        // parsing through friendArray
+        for (let i = 0; i < friends.length; i++) {
+            let friendScores = friends[i].scores;
+            // resets the score difference for each friend it parses
+            let scoreDifference = 0;
 
-        });
-
-        differenceArr.forEach(element => {
-            if (element.differenceArr <= differenceArr[matchIndex]) {
-                matchIndex = element;
+            // parsing through friend scores specifically
+            for (let j = 0; j < newScores.length; j++) {
+                // difference between user scores and already stored friend scores
+                scoreDifference += Math.abs(parseInt(friendScores[j]) - parseInt(newScores[j]));
             }
-        });
+            differenceArray.push(scoreDifference);
+        }
 
-        friends.push(matchFriend);
+        for (let i = 0; i < differenceArray.length; i++) {
+            if (differenceArray[i] <= differenceArray[matchIndex]) {
+                matchIndex = i;
+            }
+        }
+        friends.push(newFriend);
         return res.json(friends[matchIndex]);
     });
 }
