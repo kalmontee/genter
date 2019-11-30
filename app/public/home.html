@@ -22,6 +22,15 @@
 
 
     <style>
+        body {
+            background: #304352;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #d7d2cc, #304352);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
         img {
             height: 600px;
         }
@@ -33,12 +42,21 @@
         .jumbotron {
             position: absolute;
             top: 100px;
-            color: black;
+            color: #fff;
         }
         
         h2,
         h3 {
             font-family: 'Montserrat', sans-serif;
+        }
+        
+        p a {
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        footer {
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -61,16 +79,16 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="4000">
-                <img src="../public/assets/images/couples.jpeg" class="d-block w-100" alt="...">
+                <img src="https://i.kinja-img.com/gawker-media/image/upload/s--C7t5qdGK--/c_scale,f_auto,fl_progressive,q_80,w_800/algo5qnsv7cozvndozpf.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-interval="4000">
-                <img src="../public/assets/images/man-women-sitting.jpeg" class="d-block w-100" alt="...">
+                <img src="https://favim.com/orig/201104/24/Favim.com-23456.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-interval="4000">
-                <img src="../public/assets/images/sunset.jpeg" class="d-block w-100" alt="...">
+                <img src="https://image.freepik.com/free-photo/group-friends-with-sparkler-night-beach_23-2147645594.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-interval="4000">
-                <img src="../public/assets/images/romance.jpeg" class="d-block w-100" alt="...">
+                <img src="https://ak2.picdn.net/shutterstock/videos/19568422/thumb/1.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>
@@ -80,7 +98,7 @@
         <div class="jumbotron" style="background-color: transparent;">
             <h1><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
             <hr>
-            <h2>Your significant other is already waiting for you and you don't even know it!</h2>
+            <h2>Your new bestfriend is already waiting for you and you don't even know it!</h2>
             <h3>Answer a few basic questions to find out who. </h3>
             <h3>Then find the friend with the greatest compatibility!</h3>
             <br>

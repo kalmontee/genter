@@ -7,16 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FriendFinder</title>
 
-    <!-- Latest compiled and minified CSS & JS (Bootstrap 4 not working) -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous"> -->
-
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
@@ -36,26 +30,21 @@
         h3 {
             margin: 20px 0;
         }
+        
+        p a {
+            color: #fff;
+            font-size: 15px;
+        }
+        
+        button {
+            -webkit-box-shadow: 0px 0px 50px -2px #000000;
+            box-shadow: 0px 0px 50px -2px #000000;
+        }
     </style>
 
 </head>
 
 <body>
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand">Friend Finder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav justify-content-center">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" style="color: #fff;">Home</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
-
     <div class="container">
 
         <h2>Survey Questions</h2>
@@ -213,7 +202,8 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    <img id="match-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUTEhMVFhUXGBUVFRcXFxUVFxgVFRUXGBgXFxUYHSggGBolHRcVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lHyItLS0tLS0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLf"
+                        alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -246,12 +236,12 @@
         }
 
         // Capture the form inputs
-        $("#submit").on("click", function(event) {
+        $("#submit").on("click", (event) => {
             event.preventDefault();
             console.log('working?')
 
             // Form validation
-            function validateForm() {
+            function getForm() {
                 var isValid = true;
                 $(".form-control").each(function() {
                     if ($(this).val() === "") {
@@ -269,7 +259,7 @@
             }
 
             // If all required fields are filled
-            if (validateForm()) {
+            if (getForm()) {
                 // Create an object for the user"s data
                 var userData = {
                     name: $("#name").val(),
