@@ -37,7 +37,7 @@ npm install express
 npm install path
 ```
 
-## USAGE
+## Usage
 
 You should see something like this:
 
